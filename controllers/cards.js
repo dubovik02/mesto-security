@@ -45,7 +45,7 @@ module.exports.deleteCardById = (req, res) => {
             res.status(500).send({ message: serverErrMessage });
           });
       } else {
-        res.status(400).send({ message: 'Нет прав на удаление' });
+        res.status(403).send({ message: 'Нет прав на удаление' });
       }
     })
     .catch((err) => {
